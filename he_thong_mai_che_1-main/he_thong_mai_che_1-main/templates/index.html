@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hệ thống Mái che tự động</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/static/main.js" defer></script>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    #controls { margin-top: 20px; }
+    button { padding: 10px 20px; margin: 10px; font-size: 16px; }
+    .status-box { margin: 10px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <h1>Giám sát & Điều khiển Mái che</h1>
+
+  <div id="controls">
+    <button onclick="sendCommand('open')">Mở Mái che</button>
+    <button onclick="sendCommand('close')">Đóng Mái che</button>
+  </div>
+
+  <div class="status-box">
+    <p>🌧️ Ánh Sáng: <span id="rainValue">--</span></p>
+    <p>☀️ Mưa: <span id="lightValue">--</span></p>
+    <p>🏠 Trạng thái mái che: <span id="roofStatus">--</span></p>
+  </div>
+
+  <canvas id="myChart" height="100"></canvas>
+</body>
+</html>
